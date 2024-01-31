@@ -1,3 +1,7 @@
+## Context 
+
+Il s'agit de mettre en place un site de e-commerce pour des artisans. Le site devra mettre en avant le savoir faire et les produits.
+
 ## Conception
 
 - [ ] Proposer un traitement asynchrone lorsque c'est possible
