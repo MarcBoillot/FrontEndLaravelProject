@@ -6,6 +6,8 @@ Ce site sera accès sur la découverte des artisans Francais il servira de vitri
 L'artisan devra obligatoirement s'enregistrer pour accéder à sa page personnelle et il pourra modifier des éléments de sa page comme sa photo de profil ou son histoire. Il pourra mettre en avant certains de ses produits grace à des photos et sa description, ajouter des produits modifier et supprimer ses produits.Il peut aussi  consulter la page des autres artisans voir leurs produits. Il recevera une notification de commandes spécifiques qui son customable et valider sa prise en compte ou refuser la prise en compte. 
 Le site permettra au cllient d'avoir la qualité et le savoir faire francais et de se rapprocher de l'artisan grace à son histoire et celle de son produit. L'artisan aura une meilleure visibilité grace au système de partage sur les réseaux sociaux et l'efficience du site. Le site aura un bon référencement avec le slug.
 
+Le site respectera 5 principes du GreenIT
+
 ## Conception
 
 - [ ] Proposer un traitement asynchrone lorsque c'est possible
