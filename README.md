@@ -1,6 +1,10 @@
 ## Context 
 
-Il s'agit de mettre en place un site de e-commerce pour des artisans. Le site devra mettre en avant le savoir faire et les produits.
+Il s'agit de mettre en place un site de e-commerce pour des artisans. Le site devra mettre en avant le savoir faire et les produits. Le client pourra visiter le site sans s'enregistrer, voir les différents produits, voir les artisans, filtrer sa recherche et ajouter des produits a son panier. Pour valider son panier un client non enregistrer devra s'enregistrer. Une fois le client enregistré il pourra accéder a son profil et modifier ses informations mais aussi a l'historique de ses commandes. 
+Le parcours du client sera simple et intuitif et l'optimisation lui permettra d'accéder faciliment aux produits et commander les produits qu'il désire. Il pourra suivre l'avancement de sa commande voir l'annuler. 
+Ce site sera accès sur la découverte des artisans Francais il servira de vitrine grace à des pages de présentation de leur histoire et de leurs produit accompagnés de photos. 
+L'artisan devra obligatoirement s'enregistrer pour accéder à sa page personnelle et il pourra modifier des éléments de sa page comme sa photo de profil ou son histoire. Il pourra mettre en avant certains de ses produits grace à des photos et sa description, ajouter des produits modifier et supprimer ses produits.Il peut aussi  consulter la page des autres artisans voir leurs produits. Il recevera une notification de commandes spécifiques qui son customable et valider sa prise en compte ou refuser la prise en compte. 
+Le site permettra au cllient d'avoir la qualité et le savoir faire francais et de se rapprocher de l'artisan grace à son histoire et celle de son produit. L'artisan aura une meilleure visibilité grace au système de partage sur les réseaux sociaux et l'efficience du site. Le site aura un bon référencement avec le slug.
 
 ## Conception
 
