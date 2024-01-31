@@ -86,10 +86,12 @@ Le site permettra au cllient d'avoir la qualité et le savoir faire francais et 
 	- postal_code varchar(55),
 	- user_id int fk,
 - #### Images
-	- image_id int pk,
-	- image_path varchar(255),
-	- foreign_key??polymorphism, pls help us le math
-
+	- id int pk,
+	- path varchar(255),
+	- size varchar(255),
+    - imageable_type varchar(255),
+    - imageable_id varchar(255)
+        
 ### Endpoints
 
 | Endpoint | Type de requête | Page |
@@ -162,5 +164,8 @@ https://phpunit.de/documentation.html
 repository: https://www.atrakeur.com/blog/web/laravel-et-pattern-repository/
 https://medium.com/@sliusarchyn/service-layer-in-laravel-use-it-ae861fb0f124
 
-## BDD pattern
-![diagramUML.svg](..%2F..%2Fcraftedbydiagrams%2Fhtml-docs%2Fdiagrams%2FdiagramUML.svg)
+## DIAGRAM
+![image](https://github.com/MarcBoillot/laravelProject/assets/133685807/af03d54d-07b8-4a1e-9d83-b2ac816c809b)
+
+
+
