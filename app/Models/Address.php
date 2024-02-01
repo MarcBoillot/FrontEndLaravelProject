@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,5 +22,8 @@ class Address extends Model
         'postal_code',
         'user_id'
     ];
+    function user(): BelongsTo {
+                        return $this->belongsTo(User::class, 'user_id');
+                    }
 
 }

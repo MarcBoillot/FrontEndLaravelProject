@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+
 
 class Product extends Model
 {
@@ -22,11 +23,10 @@ class Product extends Model
         'is_active',
         'user_id'
     ];
-    //faire une fonction pour faire les liens entre les tables
-//     function order(): BelongsTo {
-//         return $this->belongsTo(Order::class, 'order_id');
-//     }
-//     public function comments(): HasMany {
-//         return $this->hasMany(Comment::class);
-//     }
+    function categories(): BelongsToMany {
+        return $this->belongsToMany(Category::class, 'category_id');
+    }
+    public function materials(): BelongsToMany {
+        return $this->belongsToMany(Material::class,'material_id');
+    }
 }
