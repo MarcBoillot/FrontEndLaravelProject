@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+
+class Address extends Model
+{
+    use HasFactory;
+    use HasUuids;
+
+    protected $fillable = [
+        'address_name',
+        'address_type',
+        'address_firstname',
+        'address_lastname',
+        'first_address',
+        'second_address',
+        'postal_code',
+        'user_id'
+    ];
+
+}
