@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class CrafterFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => User::inRandomOrder()->first(),
+            'information' => fake()->text(),
+            'story' => fake()->text(),
+            'crafting_process' => fake()->text(),
+            'location' => fake()->streetAddress(),
+            'material_preference' => fake()->name(),
         ];
     }
 }

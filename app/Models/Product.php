@@ -23,15 +23,15 @@ class Product extends Model
         'color',
         'customizable',
         'is_active',
-        'user_id'
+
     ];
     function categories(): BelongsToMany {
-        return $this->belongsToMany(Category::class, 'category_id');
+        return $this->belongsToMany(Category::class);
     }
     function materials(): BelongsToMany {
-        return $this->belongsToMany(Material::class,'material_id');
+        return $this->belongsToMany(Material::class);
     }
-    function orderproduct(): BelongsTo {
+    function orderProduct(): BelongsTo {
         return $this->belongsTo(OrderProduct::class);
     }
 }

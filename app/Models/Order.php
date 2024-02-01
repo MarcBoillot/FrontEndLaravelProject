@@ -20,13 +20,12 @@ class Order extends Model
         'order_date',
         'delivery_address',
         'facturation_address',
-        'user_id'
     ];
      function user(): HasOne {
-                         return $this->hasOne(User::class, 'user_id');
+                         return $this->hasOne(User::class);
                      }
      function products(): HasMany {
-                         return $this->hasMany(Product::class, 'product_id');
+                         return $this->hasMany(Product::class);
                      }
     function orderProduct(): BelongsTo {
         return $this->belongsTo(orderProduct::class);

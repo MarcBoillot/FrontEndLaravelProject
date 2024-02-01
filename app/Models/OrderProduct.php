@@ -20,9 +20,9 @@ class OrderProduct extends Model
         'quantity'
     ];
     function products(): HasMany {
-        return $this->hasMany(Product::class, 'product_id');
+        return $this->hasMany(Product::class);
     }
     public function orders(): HasMany {
-        return $this->hasMany(Order::class,'order_id');
+        return $this->hasMany(Order::class);
     }
 }

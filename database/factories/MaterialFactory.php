@@ -17,7 +17,8 @@ class MaterialFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'material_name' => fake()->name(),
+
         ];
     }
 }

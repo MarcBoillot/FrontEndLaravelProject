@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('user_id');
+            $table->foreignUuid('user_id')->constrained();
             $table->integer('address_type');
 
             $table->string('address_name');
+            $table->string('postal_code');
             $table->string('address_firstname');
             $table->string('address_lastname');
             $table->string('first_address');

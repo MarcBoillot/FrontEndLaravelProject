@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('crafters', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('user_id');
+            $table->foreignUuid('user_id')->constrained();
             $table->text('information');
             $table->text('story');
             $table->text('crafting_process');

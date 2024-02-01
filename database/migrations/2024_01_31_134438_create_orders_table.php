@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->string('delivery_adress');
-            $table->string('facturation_adress');
-            $table->foreignUuid('user_id');
+            $table->string('delivery_address');
+            $table->string('facturation_address');
+            $table->foreignUuid('user_id')->constrained();
             $table->integer('order_status');
             $table->float('order_price');
             $table->dateTime('order_date');
