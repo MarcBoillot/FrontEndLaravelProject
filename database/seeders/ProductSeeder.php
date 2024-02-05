@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProductSeeder extends Seeder
 {
@@ -13,9 +15,10 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::factory()
-            ->count(50)
-            ->hasCategories(1)
-            ->create();
+//        $categories = Category::factory()->count(5)->create();
+        Product::factory(50)->create()->each(function($product){
+            $categories = Category::inRandomOrder()->first();
+            $product->categories()->attach($categories);
+        });
     }
 }
