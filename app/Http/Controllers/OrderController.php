@@ -42,9 +42,16 @@ class OrderController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Order $order)
+    public function update(Request $request, Order $order, $id)
     {
-        //
+        $order=Order::all()->find($id);
+        $order->update([
+            "delivery_address"=>$request->get('delivery_address'),
+            "facturation_address"=>$request->get('facturation_address'),
+            "order_status"=>$request->get('order_status'),
+            "order_date"=>$request->get('order_date'),
+        ]);
+        return Order::all()->last();
     }
 
     /**
@@ -52,6 +59,6 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+
     }
 }

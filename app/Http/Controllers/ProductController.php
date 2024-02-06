@@ -69,6 +69,7 @@ class ProductController extends Controller
     {
         $product=Product::all()->find($id);
         $product->categories()->detach();
+        $product->orderProduct()->detach();
         return $product->delete($product);
     }
     public function productsByCategory($categoryId){
