@@ -6,7 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Auth\RegisteredUserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -42,6 +42,8 @@ Route::middleware(['auth:sanctum'])->group(function (){
 //Route::apiResource('products', ProductController::class);
 
 
+//Route::post('/register',[RegisteredUserController::class,'store']);
+
 
 Route::get('/products', [ProductController::class,'index']);
 Route::get('/product/{id}', [ProductController::class,'show']);
@@ -50,6 +52,7 @@ Route::get('/products/category/{id}',[ProductController::class,'productsByCatego
 
 Route::get('categories',[CategoryController::class,'index']);
 Route::get('/category/{id}', [CategoryController::class,'show']);
+
 
 
 
