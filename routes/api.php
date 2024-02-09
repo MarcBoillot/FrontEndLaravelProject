@@ -41,6 +41,7 @@ Route::middleware(['auth:sanctum'])->group(function (){
     Route::delete('/order/{id}',[OrderController::class,'destroy']);
 
     Route::post('/crafter', [CrafterController::class,'store']);
+    Route::patch('/crafter/{crafter}',[CrafterController::class,'update']);
     Route::delete('/crafter/{crafter}', [CrafterController::class, 'destroy']);
 });
 

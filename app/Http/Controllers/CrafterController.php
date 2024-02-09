@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateCrafterRequest;
 use App\Models\Crafter;
 use Illuminate\Http\Request;
 
@@ -43,9 +44,14 @@ class CrafterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Crafter $crafter)
+    public function update(UpdateCrafterRequest $request, Crafter $crafter)
     {
-        //
+        $validated = $request->validated();
+        if ($crafter) {
+            $crafter->update($validated);
+        }
+
+        return $crafter;
     }
 
     /**
