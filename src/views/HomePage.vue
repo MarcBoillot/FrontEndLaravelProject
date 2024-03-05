@@ -33,36 +33,38 @@
     <div>
       <BreadCrumbs />
     </div>
-    <div>
-      <h2>LES MEILLEURES VENTES</h2>
+    <div class="bg-indigo-50">
+      <div class="flex justify-center">
+        <h2 class="pt-6 pb-6 " >LES MEILLEURES VENTES</h2>
+      </div>
       <div>
         <div v-if="loading">LOADING ...</div>
-        <div v-else class="flex">
+        <div v-else class="grid grid-cols-2 gap-2 place-items-center">
           <CardProduct v-for="product in products" :product="product" :key="product.id" />
         </div>
       </div>
     </div>
-    <div>
-      <h2>ACHETER L'ARTISANAT FRANCAIS</h2>
-      <p>Notre société defend les principes de l’artisanat en étant éthique et locale
+    <div class="bg-indigo-100 ">
+      <h2 class="flex justify-center pt-4 pb-4">ACHETER L'ARTISANAT FRANCAIS</h2>
+      <p class="">Notre société defend les principes de l’artisanat en étant éthique et locale
         Nos artisans sont tous de la région ou des régions voisines. Ils participent a une économie locale et solidaire. Tous nos produits sont made in France et de belle qualité. Nous choissons un circuit court pour éviter d’engendrer une pollution non essentielle de même que pour notre site nous respectons cinq principes de GreenIT.
-        </p>
+      </p>
     </div>
-    <div class="flex">
-      <div>
+    <div class="flex bg-indigo-50 justify-center pt-4 pb-4">
+      <div  class="pt-2 pl-4 pl-4">
         <p>24%</p>
         <p>Des produits mondiaux sont artisanaux</p>
       </div>
-      <div>
+      <div class="pt-2 pl-4 pl-4">
         <p>100%</p>
         <p>De fabrication est francaise</p>
       </div>
-      <div>
+      <div class="pt-2 pl-4 pl-4">
         <p>98%</p>
         <p>Satisfaction client</p>
       </div>
     </div>
-    <div class="flex">
+    <div class="flex bg-indigo-100 justify-center">
       <div>
         <IconArtisan/>
         <p>Artisanal</p>
@@ -77,7 +79,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <div class="bg-indigo-50">
     <div>
       <p>Categories : TABLES</p>
     </div>

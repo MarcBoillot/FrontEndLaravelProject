@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="card card-compact w-96 bg-base-100 shadow-xl">
+  <div class="card card-compact w-48 bg-base-100 shadow-xl">
     <figure><img :src="product.image" alt="image" /></figure>
 
     <div class="card-body">
@@ -16,7 +16,7 @@ defineProps({
       <h2 class="card-title">{{product.title}}</h2>
       <p>{{product.description}}</p>
       <div class="card-actions justify-end">
-        <h3>{{product.price}}</h3>
+        <h3>{{product.price}} $</h3>
         <button class="btn btn-primary">Buy Now</button>
       </div>
     </div>

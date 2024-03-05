@@ -3,7 +3,10 @@ import axios from 'axios'
 import {ref} from 'vue'
 const loading = ref(true)
 const categories = ref()
+const selected = ref()
+function getCategory(){
 
+}
 async function getData (){
   loading.value = true;
   try{
@@ -15,6 +18,7 @@ async function getData (){
   loading.value=false
 }
 getData()
+
 </script>
 
 <template>
@@ -24,12 +28,12 @@ getData()
         <input class="input input-bordered join-item" placeholder="Search"/>
       </div>
     </div>
-    <select class="select select-bordered join-item">
+    <select v-model="selected" class="select select-bordered join-item">
       <option disabled selected >---Categories---</option>
       <option v-for="category in categories" :category="category" :key="category.id">{{category}}</option>
     </select>
     <div class="indicator">
-      <button class="btn join-item">Search</button>
+      <button @click="getCategory()" class="btn join-item">Search</button>
     </div>
   </div>
 </template>
