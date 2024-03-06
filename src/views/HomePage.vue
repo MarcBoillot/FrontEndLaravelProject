@@ -19,15 +19,6 @@
 <template>
   <div>
     <div>
-      <HardTopBar />
-    </div>
-    <div>
-      <TopHeader />
-    </div>
-    <div>
-      <NavBar />
-    </div>
-    <div>
       <ImgBackground />
     </div>
     <div>

@@ -1,41 +1,23 @@
 <script setup>
 
-import axios from 'axios'
-import {ref} from 'vue'
-const loading = ref(true)
-const products = ref()
+import { useProductStore } from '@/stores/product.js';
+import { onMounted } from 'vue' // Correct the path
 
-async function getData (){
-  loading.value = true;
-    try{
-    const response = await axios.get('https://fakestoreapi.com/products')
-    products.value = response.data
-  } catch (e) {
-    throw new Error('NO DATA');
-  }
-  loading.value=false
-}
-getData()
+onMounted(async () => {
+  await productStoreInstance.getProducts(); // Ensure that the products are loaded when the component is mounted
+});
+
+const productStoreInstance = useProductStore();
+
 </script>
 
 <template>
   <div>
-    <div>
-      <HardTopBar/>
-    </div>
-    <div>
-      <TopHeader/>
-    </div>
-    <div>
-      <NavBar/>
-    </div>
-    <div>
       <BreadCrumbs/>
-    </div>
   </div>
-  <div v-if="loading">LOADING ...</div>
+  <div v-if="productStoreInstance.loading"><Loading/></div>
   <div v-else>
-    <CardProduct v-for="product in products" :product="product" :key="product.id"/>
+    <CardProduct v-for="product in productStoreInstance.filteredProducts" :product="product" :key="product.id"/>
   </div>
 
   <Footer/>

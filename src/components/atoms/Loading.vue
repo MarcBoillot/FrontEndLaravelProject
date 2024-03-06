@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <RouterLink to="/cart"><PhShopping-cart/></RouterLink>
+  <span class="loading loading-infinity loading-md"></span>
 </template>
 
 <style scoped>

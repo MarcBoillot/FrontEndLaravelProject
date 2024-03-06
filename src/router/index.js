@@ -1,6 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import ProductsPage from '../views/ProductsPage.vue'
+import NavBar from '@/components/atoms/NavBar.vue'
+import LoginPage from '@/views/LoginPage.vue'
+import CategoriesPage from '@/views/CategoriesPage.vue'
+import CartPage from '@/views/CartPage.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -9,14 +13,46 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomePage
+      components: {
+        content: HomePage,
+        navbar: NavBar
+      }
     },
 
     {
       path: '/products',
       name: 'products',
-      component: () => import('../views/ProductsPage.vue')
-    }
+      components: {
+        content: ProductsPage,
+        navbar: NavBar
+      },
+    },
+    {
+      path: '/login',
+      name: 'login',
+      components: {
+        content: LoginPage,
+        navbar: NavBar
+      }
+    },
+    {
+      path: '/categories',
+      name: 'categories',
+      components: {
+        content: CategoriesPage,
+        navbar: NavBar
+      }
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      components: {
+        content: CartPage,
+        navbar: NavBar
+      }
+    },
+
+
   ]
 })
 

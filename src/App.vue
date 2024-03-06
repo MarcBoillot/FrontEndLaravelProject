@@ -1,18 +1,16 @@
 <script setup>
 </script>
 
-<template>
+<template >
   <header>
+
   </header>
+  <RouterView name="navbar"/>
   <body>
-
+  <RouterView name="content"/>
   </body>
-
-  <RouterView/>
 </template>
-
 <style scoped>
-
 
 
 </style>

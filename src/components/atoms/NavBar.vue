@@ -4,6 +4,8 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
+  <HardTopBar />
+  <TopHeader />
   <div class="navbar bg-base-100">
     <RouterLink to="/">
     <a class="btn btn-ghost text-xl">HOME</a>
@@ -12,7 +14,9 @@ import { RouterLink } from 'vue-router'
       <a class="btn btn-ghost text-xl">PRODUCTS</a>
     </RouterLink>
     <a class="btn btn-ghost text-xl">CRAFTERS</a>
-    <a class="btn btn-ghost text-xl">CATEGORIES</a>
+    <RouterLink to="/categories">
+      <a class="btn btn-ghost text-xl">CATEGORIES</a>
+    </RouterLink>
   </div>
 </template>
 
