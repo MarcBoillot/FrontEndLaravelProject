@@ -5,21 +5,21 @@ import IconHome from '@/components/atoms/IconHome.vue'
 </script>
 
 <template>
-  <div class="mr-8 ">
-    <ul class="menu menu-horizontal bg-base-200 rounded-box">
+  <div class="mr-8">
+    <ul class="menu menu-horizontal bg-base1000 rounded-none">
       <li>
         <a>
-          <IconProfil/>
+          <IconProfil />
         </a>
       </li>
       <li>
         <a>
-          <IconHome/>
+          <IconHome />
         </a>
       </li>
       <li>
         <a>
-          <IconCart/>
+          <IconCart />
         </a>
       </li>
     </ul>

@@ -4,7 +4,8 @@ import { ref } from 'vue'
 
 export const useCartStore = defineStore('cart', () => {
 
-  const cartItems = ref([])
+  const cartItems = ref(loadCartFromLocalStorage())
+  const texst = ref();
 
   function addToCart(product) {
     this.cartItems.value.push(product);
@@ -19,7 +20,7 @@ export const useCartStore = defineStore('cart', () => {
 
   function loadCartFromLocalStorage() {
     const storedCartItems = localStorage.getItem('cartItems');
-    this.cartItems.value = storedCartItems ? JSON.parse(storedCartItems) : [];
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
   }
 
   return {

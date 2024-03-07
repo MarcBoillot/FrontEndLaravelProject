@@ -4,7 +4,7 @@
 
 <template>
   <div class="">
-    <PhEnvelope/>
+    <PhEnvelope class=""/>
   </div>
 
 </template>

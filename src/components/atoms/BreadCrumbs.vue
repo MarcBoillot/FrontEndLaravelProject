@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <div class="text-sm breadcrumbs">
+  <div class="text-sm breadcrumbs ml-8 mt-8 p-3">
     <ul>
-      <li><a>Home</a></li>
-      <li><a>Products</a></li>
-      <li><a>Crafters</a></li>
-      <li><a>Categories</a></li>
+      <li><a class="">Home</a></li>
+      <li><a class="">Products</a></li>
+      <li><a class="">Crafters</a></li>
+      <li><a class="">Categories</a></li>
     </ul>
   </div>
 </template>

@@ -26,7 +26,7 @@
     </div>
     <div class="">
       <div class="flex justify-center">
-        <h2 class="pt-6 pb-6 " >LES MEILLEURES VENTES</h2>
+        <h2 class="mt-12 mb-12 pt-6 pb-6 font-sans tracking-wider md" >LES MEILLEURES VENTES</h2>
       </div>
       <div>
         <div v-if="loading">LOADING ...</div>

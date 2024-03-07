@@ -2,6 +2,7 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { ref } from 'vue'
+import router from '@/router/index.js'
 export const useProductStore = defineStore('product', () => {
   const products = ref([])
   const categories = ref([])
@@ -42,6 +43,7 @@ export const useProductStore = defineStore('product', () => {
       throw new Error('NO DATA');
     }
     this.loading = false;
+    this.router.push({ name:"products" })
   }
 
   return {

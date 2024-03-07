@@ -14,15 +14,15 @@ import { RouterLink } from 'vue-router'
     </div>
     <div>
       <RouterLink to="/products">
-        <a class="btn btn-ghost text-sm">Products</a>
+        <a class="btn btn-ghost text-md">Products</a>
       </RouterLink>
     </div>
     <div>
-      <a class="btn btn-ghost text-sm">Crafters</a>
+      <a class="btn btn-ghost text-md">Crafters</a>
     </div>
    <div class="mr-60">
      <RouterLink to="/categories">
-       <a class="btn btn-ghost text-sm">Categories</a>
+       <a class="btn btn-ghost text-md">Categories</a>
      </RouterLink>
    </div>
   </div>

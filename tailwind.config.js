@@ -3,7 +3,8 @@ export default {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
     fontFamily:{
-      'serif':['ui-serif','Imbue']
+      'serif':['ui-serif','Imbue'],
+      'sans':['ui-sans-serif','Rubik']
     },
     letterSpacing: {
       tightest: '-.075em',
@@ -19,8 +20,11 @@ export default {
   plugins: [require("daisyui")],
 
   daisyui: {
-      themes: false,
-      darkTheme:"dark",
+      themes: [
+        "light",
+        "dark",
+        "corporate"
+      ],
     },
 }
 

@@ -2,6 +2,7 @@
 </script>
 
 <template >
+  <html data-theme="light">
   <header>
 
   </header>
@@ -9,6 +10,8 @@
   <body>
   <RouterView name="content"/>
   </body>
+  </html>
+
 </template>
 <style scoped>
 
