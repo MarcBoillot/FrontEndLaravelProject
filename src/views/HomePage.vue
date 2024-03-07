@@ -24,7 +24,7 @@
     <div>
       <BreadCrumbs />
     </div>
-    <div class="bg-indigo-50">
+    <div class="">
       <div class="flex justify-center">
         <h2 class="pt-6 pb-6 " >LES MEILLEURES VENTES</h2>
       </div>
@@ -35,13 +35,13 @@
         </div>
       </div>
     </div>
-    <div class="bg-indigo-100 ">
+    <div class="">
       <h2 class="flex justify-center pt-4 pb-4">ACHETER L'ARTISANAT FRANCAIS</h2>
       <p class="">Notre société defend les principes de l’artisanat en étant éthique et locale
         Nos artisans sont tous de la région ou des régions voisines. Ils participent a une économie locale et solidaire. Tous nos produits sont made in France et de belle qualité. Nous choissons un circuit court pour éviter d’engendrer une pollution non essentielle de même que pour notre site nous respectons cinq principes de GreenIT.
       </p>
     </div>
-    <div class="flex bg-indigo-50 justify-center pt-4 pb-4">
+    <div class="flex justify-center pt-4 pb-4">
       <div  class="pt-2 pl-4 pl-4">
         <p>24%</p>
         <p>Des produits mondiaux sont artisanaux</p>
@@ -55,7 +55,7 @@
         <p>Satisfaction client</p>
       </div>
     </div>
-    <div class="flex bg-indigo-100 justify-center">
+    <div class="flex justify-center">
       <div>
         <IconArtisan/>
         <p>Artisanal</p>
@@ -70,7 +70,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-indigo-50">
+  <div class="">
     <div>
       <p>Categories : TABLES</p>
     </div>
