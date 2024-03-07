@@ -5,11 +5,11 @@ import IconDarkMode from '@/components/atoms/IconDarkMode.vue'
 </script>
 
 <template>
-  <div class="flex">
-    <div>
+  <div class="flex justify-between m-1">
+    <div class="">
       <IconDarkMode/>
     </div>
-    <div class="justify-items-end">
+    <div class=" ">
       <ContactTopBar/>
     </div>
   </div>

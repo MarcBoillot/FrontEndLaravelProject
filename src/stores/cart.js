@@ -1,29 +1,29 @@
 // stores/cart.js
 import { defineStore } from 'pinia';
+import { ref } from 'vue'
 
 export const useCartStore = defineStore('cart', () => {
-  const state = {
-    cartItems: [],
-  };
+
+  const cartItems = ref([])
 
   function addToCart(product) {
-    state.cartItems.push(product);
+    this.cartItems.value.push(product);
     saveCartToLocalStorage();
     console.log('Product added to cart:', product);
   }
 
   function saveCartToLocalStorage() {
-    localStorage.setItem('cartItems', JSON.stringify(state.cartItems));
-    console.log('Cart saved to Local Storage:', state.cartItems);
+    localStorage.setItem('cartItems', JSON.stringify(this.cartItems.value));
+    console.log('Cart saved to Local Storage:', this.cartItems.value);
   }
 
   function loadCartFromLocalStorage() {
     const storedCartItems = localStorage.getItem('cartItems');
-    state.cartItems = storedCartItems ? JSON.parse(storedCartItems) : [];
+    this.cartItems.value = storedCartItems ? JSON.parse(storedCartItems) : [];
   }
 
   return {
-    ...state,
+    cartItems,
     addToCart,
     loadCartFromLocalStorage,
   };

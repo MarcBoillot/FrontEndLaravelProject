@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="p-2">
+  <div class="text-sm mr-2">
     <p>Contact@contact.fr</p>
   </div>
 

@@ -5,7 +5,7 @@ import IconHome from '@/components/atoms/IconHome.vue'
 </script>
 
 <template>
-  <div>
+  <div class="mr-8 ">
     <ul class="menu menu-horizontal bg-base-200 rounded-box">
       <li>
         <a>

@@ -3,7 +3,7 @@ import { useCartStore } from '@/stores/cart';
 import CardProduct from '@/components/organisms/CardProduct.vue';
 
 const cartStore = useCartStore();
-
+cartStore.loadCartFromLocalStorage();
 </script>
 
 <template>
@@ -15,7 +15,6 @@ const cartStore = useCartStore();
     </div>
 
     <div v-else>
-      {{ cartStore.cartItems }}
       <CardProduct v-for="product in cartStore.cartItems" :product="product" :key="product.id" />
     </div>
   </div>

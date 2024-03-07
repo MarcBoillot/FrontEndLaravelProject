@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="artboard artboard-horizontal phone-6">
-    <img src="" alt="image">
+  <div class="h-96 overflow-hidden">
+    <img src="/../laravelProjetFrontEnd/public/pexels-abby-chung-1297938.jpg" class="bg-contain w-full" alt="image">
   </div>
 </template>
 

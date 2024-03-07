@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="align-middle margin margin-top py-3 px-3">
-    <h1>
+  <div class="flex items-center ml-8 py-3 px-3 tracking-widest font-serif ">
+    <h1 class="text-3xl">
       CRAFTED BY
     </h1>
   </div>

@@ -1,15 +1,14 @@
 // stores/filterCategory.js
 import { defineStore } from 'pinia';
 import axios from 'axios';
+import { ref } from 'vue'
 export const useProductStore = defineStore('product', () => {
-  const state = {
-    products:[],
-    categories:[],
-    selected: '',
-    categoryProducts: [],
-    loading: true,
-    filteredProducts: [], // Add this variable for filtered products
-  };
+  const products = ref([])
+  const categories = ref([])
+  const selected = ref('')
+  const categoryProducts = ref([])
+  const loading = ref(true)
+  const filteredProducts = ref([])
   async function getCategories (){
     this.loading = true;
     try{
@@ -17,7 +16,7 @@ export const useProductStore = defineStore('product', () => {
       this.categories = response.data
 
     } catch (e) {
-      throw new Error('NO CATEGORIES');
+      throw new Error(e);
     }
     this.loading=false
   }
@@ -28,7 +27,7 @@ export const useProductStore = defineStore('product', () => {
       this.products = response.data
       this.filteredProducts = response.data
     } catch (e) {
-      throw new Error('NO DATA');
+      throw new Error(e);
     }
     this.loading=false
   }
@@ -46,7 +45,12 @@ export const useProductStore = defineStore('product', () => {
   }
 
   return {
-    ...state,
+    products,
+    categories,
+    selected,
+    categoryProducts,
+    loading,
+    filteredProducts,
     getProducts,
     getCategories,
     getCategoryProducts,

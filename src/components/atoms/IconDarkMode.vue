@@ -4,7 +4,7 @@
 
 <template>
 <!--  <html data-theme="cupcake"></html>-->
-  <div class="p-2">
+  <div class="">
     <PhMoon/>
   </div>
 

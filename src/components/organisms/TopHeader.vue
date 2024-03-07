@@ -6,7 +6,7 @@ import IconMenu from '@/components/molecules/IconMenu.vue'
 </script>
 
 <template>
-  <div class="flex items-stretch">
+  <div class="flex justify-between">
     <div class="py-8">
       <LogoText/>
     </div>
