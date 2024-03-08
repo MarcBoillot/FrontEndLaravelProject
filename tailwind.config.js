@@ -2,6 +2,15 @@
 export default {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
+    colors:{
+      state: {
+        950:'#020617',
+        700: '#334155'
+      },
+      white:{
+        100:'#ffffff'
+      }
+    },
     fontFamily:{
       'serif':['ui-serif','Imbue'],
       'sans':['ui-sans-serif','Rubik']

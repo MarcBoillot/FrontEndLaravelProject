@@ -2,7 +2,8 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
 import { ref } from 'vue'
-import router from '@/router/index.js'
+//this is a store for products we use it to take this informations in others components
+//we defined constante in ref for reactive content and after make a method for use it
 export const useProductStore = defineStore('product', () => {
   const products = ref([])
   const categories = ref([])

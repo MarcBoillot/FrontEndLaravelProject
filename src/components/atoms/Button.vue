@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-    Button
-  </button>
+  <div class="mt-4">
+    <button class="bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 no-rounded -tracking-wider text-sm" @click="">Se connecter</button>
+  </div>
 </template>
 
 <style scoped>
