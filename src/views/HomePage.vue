@@ -35,24 +35,24 @@
         </div>
       </div>
     </div>
-    <div class="ml-24 mr-24 mb-24">
+    <div class="ml-24 mr-24 mb-24 mt-24">
       <h2 class="flex justify-center pt-4 pb-4 mb-16">ACHETER L'ARTISANAT FRANCAIS</h2>
       <p class="text-center ">Notre société defend les principes de l’artisanat en étant éthique et locale
         Nos artisans sont tous de la région ou des régions voisines. Ils participent a une économie locale et solidaire. Tous nos produits sont made in France et de belle qualité. Nous choissons un circuit court pour éviter d’engendrer une pollution non essentielle de même que pour notre site nous respectons cinq principes de GreenIT.
       </p>
     </div>
-    <div class="flex justify-center pt-4 pb-4">
+    <div class="flex justify-between pt-4 pb-4 bg-state-950">
       <div  class="pt-2 pl-4 ">
-        <p>24%</p>
-        <p>Des produits mondiaux sont artisanaux</p>
+        <p class="text-white-100">24%</p>
+        <p class="text-white-100">Des produits mondiaux sont artisanaux</p>
       </div>
       <div class="pt-2 pl-4 ">
-        <p>100%</p>
-        <p>De fabrication est francaise</p>
+        <p class="text-white-100">100%</p>
+        <p class="text-white-100">De fabrication est francaise</p>
       </div>
       <div class="pt-2 pl-4 ">
-        <p>98%</p>
-        <p>Satisfaction client</p>
+        <p class="text-white-100">98%</p>
+        <p class="text-white-100">Satisfaction client</p>
       </div>
     </div>
     <div class="flex justify-center">
