@@ -16,7 +16,7 @@ onMounted(() => {
         <input class="input input-bordered rounded-none join-item w-96" placeholder="Search"/>
       </div>
     </div>
-    <select v-model="productStoreInstance.selected" class="select select-bordered join-item rounded-none">
+    <select v-model="productStoreInstance.selected" class="select select-bordered join-item rounded-none w-32">
       <option disabled selected>---Categories---</option>
       <option class="m-4" v-for="category in productStoreInstance.categories" :key="category">{{category}}</option>
     </select>

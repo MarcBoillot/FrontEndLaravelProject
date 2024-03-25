@@ -22,7 +22,7 @@ function handleAddToCart(product) {
     <figure><img class="w-24 mb-48" :src="product.image" alt="image" /></figure>
     <div class="w-3/4 card-body">
       <h4>{{ product.category }}</h4>
-      <h4 class="card-title text-sm">{{ product.title.length > 50
+      <h4 class="card-title text-sm">{{ product.name.length > 50
         ? product.title.substr(0, 20) + '...'
         : product.title }}</h4>
       <div class="text-xs">Description</div>

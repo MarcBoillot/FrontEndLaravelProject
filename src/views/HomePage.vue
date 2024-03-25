@@ -7,7 +7,7 @@
   async function getData (){
   loading.value = true;
   try{
-  const response = await axios.get('https://fakestoreapi.com/products?limit=2')
+  const response = await axios.get('http://localhost:8000/api/products')
   products.value = response.data
 } catch (e) {
   throw new Error('NO DATA');

@@ -14,7 +14,7 @@ export const useProductStore = defineStore('product', () => {
   async function getCategories (){
     this.loading = true;
     try{
-      const response = await axios.get('https://fakestoreapi.com/products/categories')
+      const response = await axios.get('http://localhost:8000/api/categories')
       this.categories = response.data
 
     } catch (e) {
@@ -25,7 +25,7 @@ export const useProductStore = defineStore('product', () => {
   async function getProducts (){
     this.loading = true;
     try{
-      const response = await axios.get('https://fakestoreapi.com/products')
+      const response = await axios.get('http://localhost:8000/api/products')
       this.products = response.data
       this.filteredProducts = response.data
     } catch (e) {
@@ -36,7 +36,7 @@ export const useProductStore = defineStore('product', () => {
   async function getCategoryProducts() {
     this.loading = true;
     try {
-      const response = await axios.get(`https://fakestoreapi.com/products/category/${this.selected}`);
+      const response = await axios.get(`http://localhost:8000/api/products/category/${this.selected}`);
       this.categoryProducts = response.data;
       this.filteredProducts = response.data;
       console.log(this.filteredProducts,response.data)// Initialize filteredProducts with categoryProducts
