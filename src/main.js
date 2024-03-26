@@ -10,7 +10,7 @@ import axios from 'axios'
 const pinia = createPinia();
 
 axios.defaults.withCredentials = true;
-axios.defaults.withXSRFToken = true;
+axios.defaults.withXSRFToken= true;
 pinia.use(({ store }) => {
   store.router = markRaw(router)
 });

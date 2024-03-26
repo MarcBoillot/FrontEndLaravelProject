@@ -40,6 +40,7 @@ export const useCartStore = defineStore('cart', () => {
   }
 
   return {
+
     cartItems,
     addToCart,
     loadCartFromLocalStorage,

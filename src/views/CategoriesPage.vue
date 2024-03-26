@@ -8,8 +8,7 @@ const categoryStoreInstance = useProductStore();
 
 <template>
 <div>
-<!--  <p v-for ="" category for jkfjdkdfj.category_name">{{ categoryStoreInstance.categories.category_name }}</p>-->
-  <p>{{ categoryStoreInstance.categories }}</p>
+  <p v-for="category in categoryStoreInstance.categories" :key="category">{{ category.category_name }}</p>
 </div>
 </template>
 

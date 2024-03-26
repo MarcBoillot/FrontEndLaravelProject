@@ -22,7 +22,7 @@ cartStore.loadCartFromLocalStorage()
           <img :src="product.image"  alt="Product image" class="w-48 h-48 object-cover">
         </div>
         <div class="mt-4 md:mt-0 md:ml-6">
-          <h2 class="text-lg font-bold">{{ product.title.length > 50 ? product.title.substr(0, 20) : product.title }}</h2>
+          <h2 class="text-lg font-bold">{{ product.name }}</h2>
           <p class="mt-2 text-gray-600">{{ product.description.length > 400 ? product.description.substr(0, 100) : product.description }}</p>
           <div class="mt-4 flex items-center">
             <span class="mr-2 text-gray-600">Quantity</span>
@@ -37,7 +37,7 @@ cartStore.loadCartFromLocalStorage()
       </div>
     </div>
     <div class="flex justify-start items-center mt-8">
-      <span class="text-xl font-semi-bold tracking-widest ml-4">{{ product.price }} €</span>
+      <span class="text-xl font-semi-bold tracking-widest ml-4">{{ product.unit_price }} €</span>
     </div>
   </div>
 </template>

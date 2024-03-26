@@ -1,26 +1,26 @@
 <script setup>
 
 import InputMail from '@/components/atoms/InputMail.vue'
-import InputUsername from '@/components/atoms/InputUsername.vue'
+
+// import InputUsername from '@/components/atoms/InputUsername.vue'
 import InputPassword from '@/components/atoms/InputPassword.vue'
-import Button from '@/components/atoms/Button.vue'
+import ButtonToConnect from '@/components/atoms/ButtonToConnect.vue'
+import { useUserStore } from '@/stores/user'
+const userStore = useUserStore()
 </script>
 
 <template>
   <div class="ml-48 mr-48">
-    <div class="mt-8 mb-8">
+    <div class="mt-8 mb-8" value="">
       <InputMail/>
     </div>
-    <div class="mt-8 mb-8">
-      <InputUsername/>
-    </div>
-    <div class="mt-8 mb-8">
+    <div class="mt-8 mb-8" value="">
       <InputPassword/>
       </div>
   </div>
 <div class="flex justify-center">
-  <div class="grid items-center">
-    <Button/>
+  <div class="grid items-center" >
+    <ButtonToConnect @click="userStore.login"/>
     <div class="grid items-center mt-4">
     </div>
   </div>

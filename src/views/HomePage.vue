@@ -1,6 +1,6 @@
 <script setup>
   import axios from 'axios'
-  import {ref} from 'vue'
+  import { computed, ref } from 'vue'
   const loading = ref(true)
   const products = ref()
 
@@ -14,6 +14,8 @@
 }
   loading.value=false
 }
+  const slicedProducts = computed(() => products.value.slice(0, 2));
+
   getData()
 </script>
 <template>
@@ -31,7 +33,7 @@
       <div>
         <div v-if="loading"><Loading/></div>
         <div v-else class="grid grid-cols-2 gap-2 place-items-center">
-          <CardProduct v-for="product in products" :product="product" :key="product.id" />
+          <CardProduct v-for="product in slicedProducts" :product="product" :key="product.id" />
         </div>
       </div>
     </div>
@@ -76,8 +78,8 @@
     </div>
     <div>
       <div v-if="loading">LOADING ...</div>
-      <div v-else class="flex">
-        <CardProduct v-for="product in products" :product="product" :key="product.id"/>
+      <div v-else class="grid place-items-center">
+        <CardProduct v-for="product in slicedProducts" :product="product" :key="product.id"/>
       </div>
     </div>
   </div>

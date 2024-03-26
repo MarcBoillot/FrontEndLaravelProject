@@ -18,7 +18,7 @@ onMounted(() => {
     </div>
     <select v-model="productStoreInstance.selected" class="select select-bordered join-item rounded-none w-32">
       <option disabled selected>---Categories---</option>
-      <option class="m-4" v-for="category in productStoreInstance.categories" :key="category">{{category}}</option>
+      <option class="m-4" v-for="category in productStoreInstance.categories" :key="category">{{category.category_name}}</option>
     </select>
     <div class="indicator">
       <button @click="productStoreInstance.getCategoryProducts()" class="btn join-item rounded-none">Search</button>
