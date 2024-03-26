@@ -69,6 +69,8 @@ Route::get('/category/{id}', [CategoryController::class,'show']);
 
 
 
+
+
 // Route::get('/post', [PostController::class,'show']);
 // Route::get('/post/{id}', [PostController::class,'showId']);
 // Route::get('/posts', [PostController::class,'index']);
