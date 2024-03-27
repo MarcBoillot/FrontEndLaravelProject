@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <span class="loading loading-infinity loading-md"></span>
+  <span class="grid items-center loading loading-infinity loading-md"></span>
 </template>
 
 <style scoped>

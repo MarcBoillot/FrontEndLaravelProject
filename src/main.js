@@ -11,6 +11,7 @@ const pinia = createPinia();
 
 axios.defaults.withCredentials = true;
 axios.defaults.withXSRFToken= true;
+// axios.defaults.headers.common['Authorization'] = `${access_token}`
 pinia.use(({ store }) => {
   store.router = markRaw(router)
 });

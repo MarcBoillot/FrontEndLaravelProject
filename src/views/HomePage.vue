@@ -78,7 +78,7 @@
     </div>
     <div>
       <div v-if="loading">LOADING ...</div>
-      <div v-else class="grid place-items-center">
+      <div v-else class="grid grid-cols-2 gap-2  place-items-center">
         <CardProduct v-for="product in slicedProducts" :product="product" :key="product.id"/>
       </div>
     </div>
