@@ -7,7 +7,7 @@ cartStore.loadCartFromLocalStorage();
 </script>
 
 <template>
-  <div>
+  <div class="grid place-items-center mr-48 ml-48">
     <div v-if="cartStore.cartItems.length === 0">
       <p>Votre panier est vide.</p>
     </div>

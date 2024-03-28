@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <RouterLink to="login"><PhUser/></RouterLink>
+    <PhUser/>
 </template>
 
 <style scoped>
