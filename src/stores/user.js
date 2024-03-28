@@ -35,6 +35,5 @@ export const useUserStore = defineStore('login', () => {
       console.error('Erreur lors de la déconnexion :', error)
     }
   }
-
-  return { email, password, login, logout,user }
+  return { email, password, login, logout, user }
 })
