@@ -1,9 +1,13 @@
 <script setup>
-
+defineProps({
+  crafter: {
+    type: Object,
+    required: true
+  }
+})
 import ButtonCrafters from '@/components/atoms/ButtonCrafters.vue'
-import {useCrafterStore} from '@/stores/crafters.js'
-const crafterStore =  useCrafterStore()
-crafterStore.getCrafters()
+
+
 </script>
 
 <template>
@@ -12,13 +16,11 @@ crafterStore.getCrafters()
       <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="" />
     </figure>
     <div class="card-body items-center text-center">
-      <h2 class="card-title">Name:</h2>
-      <p>information: {{crafterStore.crafters.information}}</p>
-      <p>story: {{crafterStore.crafters.story}}</p>
+      <h2 class="card-title">{{crafter.user.lastname}} {{crafter.user.firstname}}</h2>
+      <p class="mb-8"><u>Informations:</u> {{crafter.information}}</p>
+      <p><u>Story:</u> {{crafter.story}}</p>
       <div class="card-actions">
-        <RouterLink to="/crafter">
-          <ButtonCrafters/>
-        </RouterLink>
+        <RouterLink :to="{name: 'crafter', params: {crafterId: crafter.id}}">Y aller</RouterLink>
       </div>
     </div>
   </div>

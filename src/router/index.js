@@ -40,7 +40,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/crafter',
+      path: '/crafter/:crafterId',
       name: 'crafter',
       components: {
         content: CrafterPage,
