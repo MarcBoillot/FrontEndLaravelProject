@@ -33,6 +33,8 @@ export const useProductStore = defineStore('product', () => {
     }
     this.loading=false
   }
+
+
   async function getCategoryProducts() {
     this.loading = true;
     try {

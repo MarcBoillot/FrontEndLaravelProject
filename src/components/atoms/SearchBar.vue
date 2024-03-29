@@ -1,11 +1,18 @@
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useProductStore } from '@/stores/product.js'
 const productStoreInstance = useProductStore()
 
 onMounted(() => {
   productStoreInstance.getCategories()
 })
+function selectedRow (){
+  if (productStoreInstance.selected ==="all"){
+    productStoreInstance.getProducts()
+  }else{
+    productStoreInstance.getCategoryProducts()
+  }
+}
 
 </script>
 
@@ -18,10 +25,11 @@ onMounted(() => {
     </div>
     <select v-model="productStoreInstance.selected" class="select select-bordered join-item rounded-none w-32">
       <option disabled selected>---Categories---</option>
+      <option value="all">All</option>
       <option class="m-4" v-for="category in productStoreInstance.categories" :key="category">{{category.category_name}}</option>
     </select>
     <div class="indicator">
-      <button @click="productStoreInstance.getCategoryProducts()" class="btn join-item rounded-none">Search</button>
+      <button @click="selectedRow()" class="btn join-item rounded-none">Search</button>
     </div>
     </div>
 </template>

@@ -37,7 +37,7 @@ export const useUserStore = defineStore('login', () => {
       const response = await axios.get('http://localhost:8000/api/user')
       user.value = response.data
       userId.value = response.data.id
-      console.log("userId",userId.value)
+      console.log('userId', userId.value)
       loggedIn.value = true
       console.log('connexion reussite')
     } catch (error) {
@@ -46,17 +46,18 @@ export const useUserStore = defineStore('login', () => {
 
     }
   }
+
   async function register() {
     try {
-      await axios.post('http://localhost:8000/api/register',{
-        firstname:firstname.value,
-        lastname:lastname.value,
-        email:email.value,
-        birthdate:birthdate.value,
-        phone_number:phone_number.value,
-        role:role.value,
-        password:password.value,
-        password_confirmation:password_confirmation.value
+      await axios.post('http://localhost:8000/api/register', {
+        firstname: firstname.value,
+        lastname: lastname.value,
+        email: email.value,
+        birthdate: birthdate.value,
+        phone_number: phone_number.value,
+        role: role.value,
+        password: password.value,
+        password_confirmation: password_confirmation.value
       })
     } catch (error) {
       console.error('error enregistrement:', error)
@@ -65,13 +66,14 @@ export const useUserStore = defineStore('login', () => {
 
   async function logout() {
     try {
-     await axios.post(`${url}logout`)
+      await axios.post(`${url}logout`)
       console.log('Déconnexion réussie :')
       loggedIn.value = false
     } catch (error) {
       console.error('Erreur lors de la déconnexion :', error)
     }
   }
+
   userConnected()
 
   return {
@@ -88,7 +90,7 @@ export const useUserStore = defineStore('login', () => {
     logout,
     user,
     userId,
-    userConnected ,
+    userConnected,
     register
   }
 })

@@ -18,7 +18,9 @@ import { RouterLink } from 'vue-router'
       </RouterLink>
     </div>
     <div>
-      <a class="btn btn-ghost text-md">Crafters</a>
+      <RouterLink to="/crafters">
+      <a class="btn btn-ghost text-md" >Crafters</a>
+      </RouterLink>
     </div>
    <div class="mr-60">
      <RouterLink to="/categories">

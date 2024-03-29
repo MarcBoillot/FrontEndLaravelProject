@@ -7,6 +7,8 @@ import CategoriesPage from '@/views/CategoriesPage.vue'
 import CartPage from '@/views/CartPage.vue'
 import RegisterPage from '@/views/RegisterPage.vue'
 import MyProfilPage from '@/views/MyProfilPage.vue'
+import CraftersPage from '@/views/CraftersPage.vue'
+import CrafterPage from '@/views/CrafterPage.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -26,6 +28,22 @@ const router = createRouter({
       name: 'products',
       components: {
         content: ProductsPage,
+        navbar: NavBar
+      },
+    },
+    {
+      path: '/crafters',
+      name: 'crafters',
+      components: {
+        content: CraftersPage,
+        navbar: NavBar
+      },
+    },
+    {
+      path: '/crafter',
+      name: 'crafter',
+      components: {
+        content: CrafterPage,
         navbar: NavBar
       },
     },
