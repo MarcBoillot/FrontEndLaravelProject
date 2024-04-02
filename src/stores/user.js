@@ -26,6 +26,7 @@ export const useUserStore = defineStore('login', () => {
         password: password.value
       })
       loggedIn.value = true
+      await this.router.push({ path: '/' })
     } catch (error) {
       console.error('Erreur lors de la connexion :', error)
       // Gérer l'erreur, par exemple afficher un message à l'utilisateur

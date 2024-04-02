@@ -33,18 +33,26 @@ export const useCartStore = defineStore('cart', () => {
   }
   function deleteProduct (id){
     cartItems.value = cartItems.value.filter(product => product.id !== id)
+    console.log("cartvalue :: ", cartItems.value)
+    // pour une suppression complete du localstorage
+    // localStorage.removeItem('cartItems')
+    saveCartToLocalStorage();
   }
   function loadCartFromLocalStorage() {
     const storedCartItems = localStorage.getItem('cartItems');
     return storedCartItems ? JSON.parse(storedCartItems) : [];
   }
 
+  function getOrder (){
+    const order = localStorage.getItem('cartItems',JSON.stringify(cartItems.value))
+  }
   return {
 
     cartItems,
     addToCart,
     loadCartFromLocalStorage,
     removeToCart,
-    deleteProduct
+    deleteProduct,
+    getOrder
   };
 });

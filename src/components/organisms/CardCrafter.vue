@@ -20,7 +20,9 @@ import ButtonCrafters from '@/components/atoms/ButtonCrafters.vue'
       <p class="mb-8"><u>Informations:</u> {{crafter.information}}</p>
       <p><u>Story:</u> {{crafter.story}}</p>
       <div class="card-actions">
-        <RouterLink :to="{name: 'crafter', params: {crafterId: crafter.id}}">Y aller</RouterLink>
+        <RouterLink :to="{name: 'crafter', params: {crafterId: crafter.id}}">
+          <p class="border mt-4 p-1">Me Visiter</p>
+        </RouterLink>
       </div>
     </div>
   </div>

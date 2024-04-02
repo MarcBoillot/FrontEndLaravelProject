@@ -17,11 +17,9 @@ const userStore = useUserStore()
       <InputPassword />
     </div>
   </div>
-  <div v-if="!userStore.loggedIn" class="flex justify-center">
+  <div class="flex justify-center">
     <div class="grid items-center">
-      <RouterLink to="/">
       <ButtonToConnect @click="userStore.login" />
-      </RouterLink>
     </div>
   </div>
 

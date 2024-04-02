@@ -16,6 +16,8 @@ export const useCrafterStore = defineStore('crafter', () => {
   const location =ref('')
   const material_preference =ref('')
   const loading =ref(false)
+  const crafterById = ref({})
+  const idCrafterSelected = ref('')
 
   async function getCrafters (){
     this.loading = true;
@@ -26,16 +28,18 @@ export const useCrafterStore = defineStore('crafter', () => {
     } catch (e) {
       throw new Error(e);
     }
-    loading.value=false
   }
   async function getCrafterById(crafterId){
-    loading.value = true
     try {
       const response = await axios.get(`http://localhost:8000/api/crafter/${crafterId}`)
+      crafterById.value = response.data
+      idCrafterSelected.value = crafterById.value.id
+      console.log("id crafter ::", idCrafterSelected.value )
+      console.log("crafterById data :: ", crafterById.value)
+      console.log("crafterById :: ",response)
     }catch (error){
       throw new Error(error)
     }
-    loading.value = false
   }
   function getCrafter(){
     axios.get('http://localhost:8000/api/crafter/').then((response) => {
@@ -44,6 +48,23 @@ export const useCrafterStore = defineStore('crafter', () => {
     })
   }
 
+  // async function getMaterials(){
+  //   const response = await axios.get('http://localhost:8000/api/materials/')
+  //   this.materials=response.data
+  //   console.log("materials ::",this.materials)
+  // }
+  async function getCrafterByMaterial() {
+    try {
+      const response = await axios.get(`http://localhost:8000/api/crafter/material/${this.selected}`);
+      this.crafterByMaterial = response.data;
+      this.filteredCrafters = response.data;
+      console.log(" crafterByMaterial",this.crafterByMaterial)
+      console.log("filteredCrafters",this.filteredCrafters,response.data)// Initialize filteredCrafters with crafterByMaterial
+    } catch (e) {
+      throw new Error('NO DATA');
+    }
+    this.router.push({ name:"crafters" })
+  }
   return {
     crafters,
     crafter,
@@ -57,7 +78,10 @@ export const useCrafterStore = defineStore('crafter', () => {
     story,
     crafting_process,
     location,
-    material_preference
-
+    material_preference,
+    // getMaterials,
+    getCrafterByMaterial,
+    crafterById,
+    idCrafterSelected
   };
 });

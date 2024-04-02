@@ -9,7 +9,7 @@ crafterStore.getCrafterById(route.params.crafterId)
 </script>
 
 <template>
-<CardCrafter />
+<CardCrafter :crafter="crafterStore.crafterById"/>
 </template>
 
 <style scoped>
