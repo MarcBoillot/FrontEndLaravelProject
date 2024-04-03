@@ -3,7 +3,7 @@ import { useCartStore } from '@/stores/cart';
 import CardProductCart from '@/components/organisms/CardProductCart.vue';
 
 const cartStore = useCartStore();
-cartStore.loadCartFromLocalStorage();
+
 </script>
 
 <template>
@@ -17,7 +17,9 @@ cartStore.loadCartFromLocalStorage();
     </div>
   </div>
   <div class="flex justify-center mb-8">
-    <button class=" bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 no-rounded tracking-wider">Valider mon panier</button>
+    <RouterLink to="/summary">
+    <button class=" bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 no-rounded tracking-wider" >Valider mon panier</button>
+    </RouterLink>
   </div>
 </template>
 

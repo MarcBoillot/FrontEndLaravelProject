@@ -9,6 +9,12 @@ import RegisterPage from '@/views/RegisterPage.vue'
 import MyProfilPage from '@/views/MyProfilPage.vue'
 import CraftersPage from '@/views/CraftersPage.vue'
 import CrafterPage from '@/views/CrafterPage.vue'
+import CartSummaryPage from '@/views/CartSummaryPage.vue'
+import StepperGeneraleView from '@/components/atoms/StepperGeneraleView.vue'
+import StepperDeliveryAddresses from '@/components/atoms/StepperDeliveryAddresses.vue'
+import CartDeliveryInformationsPage from '@/views/CartDeliveryInformationsPage.vue'
+import PaymentPage from '@/views/PaymentPage.vue'
+import StepperPayment from '@/components/atoms/StepperPayment.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -86,6 +92,30 @@ const router = createRouter({
       components: {
         content: CartPage,
         navbar: NavBar
+      }
+    },
+    {
+      path: '/summary',
+      name: 'summary',
+      components: {
+        content: CartSummaryPage,
+        step: StepperGeneraleView
+      }
+    },
+    {
+      path: '/deliveryInformations',
+      name: 'deliveryInformations',
+      components: {
+        content: CartDeliveryInformationsPage,
+        step: StepperDeliveryAddresses
+      }
+    },
+    {
+      path: '/payment',
+      name: 'payment',
+      components: {
+        content: PaymentPage,
+        step: StepperPayment
       }
     },
 
