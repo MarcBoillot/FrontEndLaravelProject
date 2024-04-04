@@ -15,7 +15,7 @@ const cartStore = useCartStore()
       </li>
       <li>
           <div class="indicator">
-            <span class="indicator-item badge badge-secondary ">{{cartStore.sumQuantity}}}</span>
+            <span class="indicator-item badge badge-secondary ">{{cartStore.totalQuantity}}</span>
             <button class="btn rounded-none"><IconCart/></button>
           </div>
       </li>

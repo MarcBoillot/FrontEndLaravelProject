@@ -2,18 +2,27 @@
 import { defineStore } from 'pinia'
 import { computed, ref } from 'vue'
 import axios from 'axios'
+import { useUserStore } from '@/stores/user.js'
 
 export const useCartStore = defineStore('cart', () => {
-
+  const userStore = useUserStore()
   const cartItems = ref(loadCartFromLocalStorage())
-  const totalPrice = ref('')
+  // const totalPrice = ref('')
   const unit_price = ref('')
-  const delivery_address =ref('')
-  const facturation_address=ref('')
-  const user_id=ref('')
-  const order_status=ref('')
-  const order_price=ref('')
-  const order_date=ref('')
+  const delivery_address = ref('')
+  const facturation_address = ref('')
+  const user_id = ref('')
+  const order_status = ref('1')
+  const order_price = ref('')
+  const order_date = new Date()
+  // const totalQuantity =  ref('')
+
+  const totalPrice = computed(()=>{
+    return cartItems.value.reduce((total, item) => total + item.unit_price * item.quantity, 0).toFixed(2)
+  })
+  const totalQuantity = computed(()=>{
+    return cartItems.value.reduce((total, item) => total + item.quantity, 0)
+  })
   function addToCart(product) {
     console.log(cartItems.value)
 
@@ -56,31 +65,29 @@ export const useCartStore = defineStore('cart', () => {
   }
 
   function createOrder() {
-    const cartItems = JSON.parse(localStorage.getItem('cartItems'))
 
-    const totalPrice = computed(() => {
-      return cartItems.value.reduce((total, item) => total + item.unit_price * item.quantity, 0);
-    })
-    const totalQuantity = calculateTotalQuantity(cartItems)
+
 
     axios.post('http://localhost:8000/api/order', {
-      cartItems: cartItems,
-      totalPrice: totalPrice,
-      totalQuantity: totalQuantity,
+      cartItems: cartItems.value,
+      totalPrice: totalPrice.value,
+      totalQuantity: totalQuantity.value,
       delivery_address: delivery_address.value,
       facturation_address: facturation_address.value,
-      user_id: user_id.value,
+      user_id: userStore.user.id,
       order_status: order_status.value,
-      order_price: order_price.value,
+      order_price: totalPrice.value,
       order_date: order_date.value,
     }).then(response => {
+      // mettre a jour le status et la date
+      // cartStore.order_status = response.data.order_status
+      // cartStore.order_date = response.data.order_date
       console.log('order created :: ', response.data)
-      this.router.push({path: '/payment'})
+      this.router.push({ path: '/payment' })
     }).catch(error => {
       console.error('error ', error)
     })
   }
-
 
 
   // function calculateTotalPrice(cartItems) {
@@ -89,12 +96,12 @@ export const useCartStore = defineStore('cart', () => {
   //   return totalPrice
   // }
 
-  function calculateTotalQuantity(cartItems) {
-    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0)
-    console.log("quantity :: ",totalQuantity)
-    return totalQuantity
-
-  }
+  // function calculateTotalQuantity(cartItems) {
+  //   const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0)
+  //   console.log("quantity :: ",totalQuantity)
+  //   return totalQuantity
+  //
+  // }
 
 
   return {
@@ -106,7 +113,7 @@ export const useCartStore = defineStore('cart', () => {
     deleteProduct,
     createOrder,
     // calculateTotalPrice,
-    calculateTotalQuantity,
+    // calculateTotalQuantity,
     totalPrice,
     unit_price,
     delivery_address,
@@ -114,7 +121,8 @@ export const useCartStore = defineStore('cart', () => {
     user_id,
     order_date,
     order_status,
-    order_price
+    order_price,
+    totalQuantity
 
   }
 })

@@ -3,11 +3,18 @@ import StepperDeliveryAddresses from '@/components/atoms/StepperDeliveryAddresse
 import InputDeliveryAddress from '@/components/atoms/InputDeliveryAddress.vue'
 import InputBillingAddress from '@/components/atoms/InputBillingAddress.vue'
 import { useCartStore } from '@/stores/cart.js'
-const cartStore = useCartStore()
-
 import { useUserStore } from '@/stores/user.js'
-const userStore = useUserStore()
 
+import { onMounted, ref } from 'vue'
+const cartStore = useCartStore()
+const userStore = useUserStore()
+const order_status = ref('')
+const order_date = new Date()
+
+onMounted(() => {
+  order_status.value = cartStore.order_status
+  order_date.value = cartStore.order_date
+})
 
 </script>
 
@@ -21,16 +28,16 @@ const userStore = useUserStore()
       <InputBillingAddress />
     </div>
     <div class="mt-8 mb-8">
-      {{userStore.userId}}
+      user id : {{userStore.user.id}}
     </div>
     <div class="mt-8 mb-8">
-      order_status
-    </div>
-    <div class="mt-8 mb-8">order_price :
-      {{ cartStore.totalPrice }}
+      <p>order status : {{order_status}}</p>
     </div>
     <div class="mt-8 mb-8">
-      order_date
+      order_price : {{ cartStore.totalPrice }}
+    </div>
+    <div class="mt-8 mb-8">
+      <p>date : {{cartStore.order_date}}</p>
     </div>
   </div>
   <div class="flex">

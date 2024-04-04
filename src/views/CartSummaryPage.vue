@@ -1,11 +1,6 @@
 <script setup>
 import StepperGeneraleView from '@/components/atoms/StepperGeneraleView.vue'
-defineProps({
-  product: {
-    type: Object,
-    required: true
-  }
-})
+
 import { useCartStore } from '@/stores/cart'
 const cartStore = useCartStore()
 cartStore.loadCartFromLocalStorage()
@@ -28,7 +23,7 @@ cartStore.loadCartFromLocalStorage()
       </tr>
       </thead>
       <tbody>
-      <tr v-for="product in cartStore.cartItems" :product="product" :key="product.id">
+      <tr v-for="product in cartStore.cartItems"  :key="product.id">
         <th>
           <label>
             <input type="checkbox" class="checkbox" />
