@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="text-sm breadcrumbs ml-8 mt-8 p-3">
+  <div class="text-sm breadcrumbs ml-16 mr-16 mt-8 p-3">
     <ul>
       <li><a class="">Home</a></li>
       <li><a class="">Products</a></li>

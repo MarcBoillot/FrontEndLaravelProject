@@ -1,30 +1,34 @@
 <script setup>
 
 import { RouterLink } from 'vue-router'
+import DropDownNavBar from '@/components/atoms/DropDownNavBar.vue'
 </script>
 
 <template>
   <HardTopBar />
   <TopHeader />
-  <div class="navbar bg-base-100 justify-between ">
-    <div class="ml-60">
+  <div class="visible sm:invisible h-0 w-0">
+    <DropDownNavBar/>
+  </div>
+  <div class="navbar bg-base-100 justify-between  invisible sm:visible h-0 w-0 ">
+    <div class="lg:ml-60">
       <RouterLink to="/">
-        <a class="btn btn-ghost text-sm ">Home</a>
+        <a class="btn btn-ghost text-sm ml-12 mr-12 rounded-none">Home</a>
       </RouterLink>
     </div>
     <div>
       <RouterLink to="/products">
-        <a class="btn btn-ghost text-md">Products</a>
+        <a class="btn btn-ghost text-md ml-12 mr-12 rounded-none">Products</a>
       </RouterLink>
     </div>
     <div>
       <RouterLink to="/crafters">
-      <a class="btn btn-ghost text-md" >Crafters</a>
+      <a class="btn btn-ghost text-md mr-12 ml-12 rounded-none" >Crafters</a>
       </RouterLink>
     </div>
-   <div class="mr-60">
+   <div class="lg:mr-60">
      <RouterLink to="/categories">
-       <a class="btn btn-ghost text-md">Categories</a>
+       <a class="btn btn-ghost text-md mr-12 ml-12 rounded-none">Categories</a>
      </RouterLink>
    </div>
   </div>

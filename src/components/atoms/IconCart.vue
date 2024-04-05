@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <RouterLink to="/cart"><PhShopping-cart/></RouterLink>
+  <RouterLink to="/cart">
+    <PhShopping-cart/>
+  </RouterLink>
 </template>
 
 <style scoped>

@@ -4,8 +4,12 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
+<div class="grid place-items-center">
+  <RouterLink to="/">
+    <PhHouse/>
+  </RouterLink>
+</div>
 
-   <RouterLink to="/"><PhHouse/></RouterLink>
 
 </template>
 

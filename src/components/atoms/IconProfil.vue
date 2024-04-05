@@ -3,7 +3,9 @@
 </script>
 
 <template>
-    <PhUser/>
+  <div class="rounded-none">
+    <PhUser class="rounded-none"/>
+  </div>
 </template>
 
 <style scoped>

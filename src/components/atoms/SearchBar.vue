@@ -20,7 +20,7 @@ function selectedRow (){
   <div class="join">
     <div>
       <div>
-        <input class="input input-bordered rounded-none join-item w-96" placeholder="Search"/>
+        <input class="input input-bordered rounded-none join-item w-60 h-12" placeholder="Search"/>
       </div>
     </div>
     <select v-model="productStoreInstance.selected" class="select select-bordered join-item rounded-none w-32">
