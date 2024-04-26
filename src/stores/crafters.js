@@ -22,7 +22,7 @@ export const useCrafterStore = defineStore('crafter', () => {
   async function getCrafters (){
     this.loading = true;
     try{
-      const response = await axios.get('http://localhost:8000/api/crafters')
+      const response = await axios.get('/api/crafters')
       crafters.value = response.data
       console.log("crafters :: ",crafters.value)
     } catch (e) {
@@ -31,7 +31,7 @@ export const useCrafterStore = defineStore('crafter', () => {
   }
   async function getCrafterById(crafterId){
     try {
-      const response = await axios.get(`http://localhost:8000/api/crafter/${crafterId}`)
+      const response = await axios.get(`/api/crafter/${crafterId}`)
       crafterById.value = response.data
       idCrafterSelected.value = crafterById.value.id
       console.log("id crafter ::", idCrafterSelected.value )
@@ -42,20 +42,20 @@ export const useCrafterStore = defineStore('crafter', () => {
     }
   }
   function getCrafter(){
-    axios.get('http://localhost:8000/api/crafter/').then((response) => {
+    axios.get('/api/crafter/').then((response) => {
       crafter.value = response.data
       console.log(response.data)
     })
   }
 
   // async function getMaterials(){
-  //   const response = await axios.get('http://localhost:8000/api/materials/')
+  //   const response = await axios.get('/api/materials/')
   //   this.materials=response.data
   //   console.log("materials ::",this.materials)
   // }
   async function getCrafterByMaterial() {
     try {
-      const response = await axios.get(`http://localhost:8000/api/crafter/material/${this.selected}`);
+      const response = await axios.get(`/api/crafter/material/${this.selected}`);
       this.crafterByMaterial = response.data;
       this.filteredCrafters = response.data;
       console.log(" crafterByMaterial",this.crafterByMaterial)

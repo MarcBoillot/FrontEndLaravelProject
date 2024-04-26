@@ -35,7 +35,7 @@ export const useUserStore = defineStore('login', () => {
 
   async function userConnected() {
     try {
-      const response = await axios.get('http://localhost:8000/api/user')
+      const response = await axios.get('/api/user')
       user.value = response.data
       userId.value = response.data.id
       console.log('userId', userId.value)
@@ -50,7 +50,7 @@ export const useUserStore = defineStore('login', () => {
 
   async function register() {
     try {
-      await axios.post('http://localhost:8000/api/register', {
+      await axios.post('/api/register', {
         firstname: firstname.value,
         lastname: lastname.value,
         email: email.value,
