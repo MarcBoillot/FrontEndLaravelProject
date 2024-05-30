@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <div class="rounded-none">
-    <PhUser class="rounded-none"/>
+  <div class="">
+    <PhUser class=""/>
   </div>
 </template>
 

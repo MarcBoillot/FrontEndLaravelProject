@@ -33,7 +33,7 @@ cartStore.loadCartFromLocalStorage()
           <div class="flex items-center gap-3">
             <div class="avatar">
               <div class="mask w-12 h-12">
-                <img src="" alt="Avatar Tailwind CSS Component" />
+                <img src="/src/assets/img/istockphoto-900257448-1024x1024.jpg" alt="Avatar Tailwind CSS Component" />
               </div>
             </div>
             <div>
@@ -62,10 +62,10 @@ cartStore.loadCartFromLocalStorage()
   </div>
   <div class="flex">
     <div class="mt-14 ml-8">
-      <RouterLink class="border mt-4 p-1" to="/cart">Retour</RouterLink>
+      <RouterLink class="btn border-current rounded-none" to="/cart">Retour</RouterLink>
     </div>
     <div class="mt-14 ml-8">
-      <RouterLink class="border mt-4 p-1" to="/deliveryInformations">Poursuivre</RouterLink>
+      <RouterLink  class="btn bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 rounded-none tracking-wider"  to="/deliveryAddress">Poursuivre</RouterLink>
     </div>
 
   </div>

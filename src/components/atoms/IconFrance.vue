@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <PhFlag/>
+  <PhFlag width="170px"/>
 </template>
 
 <style scoped>

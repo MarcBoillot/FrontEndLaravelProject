@@ -7,7 +7,7 @@ import IconProfil from '@/components/atoms/IconProfil.vue'
 
 <template>
   <div class="dropdown">
-    <div tabindex="0" role="button" class="btn m-1">
+    <div tabindex="0" role="button" class="rounded-none m-1">
       <IconProfil />
     </div>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-none w-48">

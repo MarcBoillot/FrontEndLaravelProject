@@ -18,7 +18,7 @@ const cartStore = useCartStore();
   </div>
   <div class="flex justify-center mb-8">
     <RouterLink to="/summary">
-    <button class=" bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 no-rounded tracking-wider" >Valider mon panier</button>
+    <button class="btn bg-state-950 hover:bg-state-700 text-white-100 font-semi-bold py-2 px-4 rounded-none tracking-wider" >Valider mon panier</button>
     </RouterLink>
   </div>
 </template>

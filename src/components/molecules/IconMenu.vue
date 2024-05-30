@@ -7,16 +7,19 @@ const cartStore = useCartStore()
 </script>
 
 <template>
-  <div class="flex items-center ml-4 mr-8">
+  <div class="flex justify-between ml-4 mr-8">
     <ul class="menu menu-horizontal bg-base1000 ">
-          <DropDownConnect class="grid place-items-center rounded-none"/>
+      <li>
+        <DropDownConnect class="grid place-items-center rounded-none"/>
+      </li>
+
       <li class="grid place-items-center">
           <IconHome class="rounded-none"/>
       </li>
       <li>
-          <div class="indicator">
-            <span class="indicator-item badge badge-slate rounded-none">{{cartStore.totalQuantity}}</span>
-            <button class="btn rounded-none"><IconCart/></button>
+          <div class="indicator ">
+            <span class="indicator-item badge badge-slate rounded-none mt-2">{{cartStore.totalQuantity}}</span>
+            <button class="rounded-none mt-1"><IconCart/></button>
           </div>
       </li>
     </ul>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
 import ProductsPage from '../views/ProductsPage.vue'
-import NavBar from '@/components/atoms/NavBar.vue'
+
 import LoginPage from '@/views/LoginPage.vue'
 import CategoriesPage from '@/views/CategoriesPage.vue'
 import CartPage from '@/views/CartPage.vue'
@@ -15,6 +15,9 @@ import StepperDeliveryAddresses from '@/components/atoms/StepperDeliveryAddresse
 import CartDeliveryInformationsPage from '@/views/CartDeliveryInformationsPage.vue'
 import PaymentPage from '@/views/PaymentPage.vue'
 import StepperPayment from '@/components/atoms/StepperPayment.vue'
+import DeliveryAddressPage from '@/views/DeliveryAddressPage.vue'
+import TopHeader from '@/components/organisms/TopHeader.vue'
+import HardTopBar from '@/components/organisms/HardTopBar.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -25,7 +28,8 @@ const router = createRouter({
       name: 'home',
       components: {
         content: HomePage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       }
     },
 
@@ -34,7 +38,8 @@ const router = createRouter({
       name: 'products',
       components: {
         content: ProductsPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       },
     },
     {
@@ -42,7 +47,8 @@ const router = createRouter({
       name: 'crafters',
       components: {
         content: CraftersPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       },
     },
     {
@@ -50,7 +56,8 @@ const router = createRouter({
       name: 'crafter',
       components: {
         content: CrafterPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       },
     },
     {
@@ -58,7 +65,8 @@ const router = createRouter({
       name: 'login',
       components: {
         content: LoginPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       }
     },
     {
@@ -66,7 +74,8 @@ const router = createRouter({
       name:'user',
       components:{
         content: MyProfilPage,
-        navbar:NavBar
+        navbar:TopHeader,
+        hardtopbar: HardTopBar
       }
 
     },
@@ -75,7 +84,8 @@ const router = createRouter({
       name: 'register',
       components: {
         content: RegisterPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       }
     },
     {
@@ -83,7 +93,8 @@ const router = createRouter({
       name: 'categories',
       components: {
         content: CategoriesPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       }
     },
     {
@@ -91,7 +102,8 @@ const router = createRouter({
       name: 'cart',
       components: {
         content: CartPage,
-        navbar: NavBar
+        navbar: TopHeader,
+        hardtopbar: HardTopBar
       }
     },
     {
@@ -100,6 +112,14 @@ const router = createRouter({
       components: {
         content: CartSummaryPage,
         step: StepperGeneraleView
+      }
+    },
+    {
+      path: '/deliveryAddress',
+      name: 'deliveryAddress',
+      components: {
+        content: DeliveryAddressPage,
+        step: StepperDeliveryAddresses
       }
     },
     {

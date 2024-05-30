@@ -1,14 +1,15 @@
 <script setup>
 </script>
 
-<template >
+<template>
   <html data-theme="light">
   <header>
-
+    <RouterView name="hardtopbar" />
   </header>
-  <RouterView name="navbar"/>
+
+  <RouterView name="navbar" />
   <body>
-  <RouterView name="content"/>
+  <RouterView name="content" />
   </body>
   </html>
 

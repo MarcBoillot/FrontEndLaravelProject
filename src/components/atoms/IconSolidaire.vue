@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<PhHandshake/>
+<PhHandshake width="50px"/>
 </template>
 
 <style scoped>

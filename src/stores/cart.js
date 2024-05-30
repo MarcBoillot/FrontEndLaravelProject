@@ -68,7 +68,7 @@ export const useCartStore = defineStore('cart', () => {
 
 
 
-    axios.post('/api/order', {
+    axios.post('http://localhost:8000/api/order', {
       cartItems: cartItems.value,
       totalPrice: totalPrice.value,
       totalQuantity: totalQuantity.value,

@@ -18,8 +18,8 @@ function handleAddToCart(product) {
 </script>
 
 <template>
-  <div class="card card-side bg-base-100 w-96 h-96 ">
-    <figure><img class="w-24 mb-48" :src="product.image" alt="image" /></figure>
+  <div class="card card-side bg-base-100  ">
+    <figure><img class="w-24 mb-48" src="/src/assets/img/istockphoto-900257448-1024x1024.jpg" alt="image" /></figure>
     <div class="w-3/4 card-body">
       <h4>{{ product.category }}</h4>
       <h4 class="card-title text-sm">{{ product.name}}</h4>

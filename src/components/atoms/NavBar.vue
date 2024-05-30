@@ -5,13 +5,13 @@ import DropDownNavBar from '@/components/atoms/DropDownNavBar.vue'
 </script>
 
 <template>
-  <HardTopBar />
-  <TopHeader />
-  <div class="visible sm:invisible h-0 w-0">
-    <DropDownNavBar/>
-  </div>
-  <div class="navbar bg-base-100 justify-between  invisible sm:visible h-0 w-0 ">
-    <div class="lg:ml-60">
+<!--  <div class="visible sm:invisible h-0 w-0">-->
+<!--    <DropDownNavBar/>-->
+<!--  </div>-->
+
+  <div class="flex items-center bg-base-100">
+
+    <div class="lg:ml-12" >
       <RouterLink to="/">
         <a class="btn btn-ghost text-sm ml-12 mr-12 rounded-none">Home</a>
       </RouterLink>
@@ -26,7 +26,7 @@ import DropDownNavBar from '@/components/atoms/DropDownNavBar.vue'
       <a class="btn btn-ghost text-md mr-12 ml-12 rounded-none" >Crafters</a>
       </RouterLink>
     </div>
-   <div class="lg:mr-60">
+   <div class="lg:mr-12">
      <RouterLink to="/categories">
        <a class="btn btn-ghost text-md mr-12 ml-12 rounded-none">Categories</a>
      </RouterLink>

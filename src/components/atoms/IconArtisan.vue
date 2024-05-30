@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <PhWrench/>
+  <PhWrench width="50px"/>
 </template>
 
 <style scoped>

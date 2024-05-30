@@ -16,7 +16,7 @@ const productStoreInstance = useProductStore();
       <BreadCrumbs/>
   </div>
   <div v-if="productStoreInstance.loading"><Loading/></div>
-  <div v-else class="grid grid-cols-2 gap-2 place-items-center">
+  <div v-else class="grid grid-cols-2 gap-2 place-items-center px-80 mt-24">
     <CardProduct v-for="product in productStoreInstance.filteredProducts" :product="product" :key="product.id"/>
   </div>
   <Footer/>

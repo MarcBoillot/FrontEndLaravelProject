@@ -1,3 +1,15 @@
+#FROM node:lts-alpine as build-stage
+#WORKDIR /app
+#COPY package*.json ./
+#RUN npm install -g npm@latest
+#COPY . .
+#RUN npm run build
+#
+#FROM nginx:stable-alpine as production-stage
+#COPY --from=build-stage /app/dist /usr/share/nginx/html
+#COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+#CMD ["nginx", "-g", "daemon off;"]
+#EXPOSE 80
 # Utilisez l'image Node.js LTS Alpine comme image de base
 FROM node:lts-alpine
 
@@ -20,6 +32,5 @@ RUN npm run build
 
 # Expose le port 8080 pour que l'application soit accessible à l'extérieur du conteneur
 
-
 # Commande par défaut pour démarrer l'application lorsque le conteneur démarre
-CMD [ "http-server", "dist" ]
+CMD [ "npm", "start" ]

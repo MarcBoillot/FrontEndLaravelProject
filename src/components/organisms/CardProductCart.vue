@@ -19,7 +19,7 @@ cartStore.loadCartFromLocalStorage()
     <div class="mt-8">
       <div class="flex flex-col md:flex-row border-gray-100 py-4">
         <div class="flex-shrink-0 ">
-          <img :src="product.image"  alt="Product image" class="w-48 h-48 object-cover">
+          <img src="/src/assets/img/istockphoto-900257448-1024x1024.jpg"  alt="Product image" class="w-48 h-48 object-cover">
         </div>
         <div class="mt-4 md:mt-0 md:ml-6">
           <h2 class="text-lg font-bold">{{ product.name }}</h2>

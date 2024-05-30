@@ -18,7 +18,7 @@ export const useOrderStore = defineStore('order', () => {
 
   async function postDeliveryInformations() {
     try {
-      await axios.post('/api/order', {
+      await axios.post('http://localhost:8000/api/order', {
         delivery_address: delivery_address.value,
         facturation_address: facturation_address.value,
         user_id: user_id.value,
