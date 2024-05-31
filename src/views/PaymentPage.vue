@@ -9,7 +9,7 @@ import StepperPayment from '@/components/atoms/StepperPayment.vue'
   page de paiement
 </div>
   <div class="mt-14 ml-8">
-    <RouterLink class="btn border-current rounded-none" to="/deliveryInformations">Retour</RouterLink>
+    <RouterLink class="btn border-current rounded-none" to="/deliveryAddress">Retour</RouterLink>
   </div>
 </template>
 

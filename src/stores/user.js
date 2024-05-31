@@ -35,7 +35,7 @@ export const useUserStore = defineStore('login', () => {
 
   async function userConnected() {
     try {
-      const response = await axios.get('/api/user')
+      const response = await axios.get(`${url}api/user`)
       user.value = response.data
       userId.value = response.data.id
       console.log('userId', userId.value)

@@ -11,10 +11,7 @@ const userStore = useUserStore()
 const order_status = ref('')
 const order_date = new Date()
 
-onMounted(() => {
-  order_status.value = cartStore.order_status
-  order_date.value = cartStore.order_date
-})
+
 
 </script>
 
