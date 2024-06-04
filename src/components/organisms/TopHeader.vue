@@ -3,7 +3,7 @@
 import LogoText from '@/components/atoms/LogoText.vue'
 
 import IconMenu from '@/components/molecules/IconMenu.vue'
-import LogoTexteMd from '@/components/atoms/LogoTexteMd.vue'
+// import LogoTexteMd from '@/components/atoms/LogoTexteMd.vue'
 import NavBar from '@/components/atoms/NavBar.vue'
 </script>
 

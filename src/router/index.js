@@ -18,6 +18,7 @@ import StepperPayment from '@/components/atoms/StepperPayment.vue'
 import DeliveryAddressPage from '@/views/DeliveryAddressPage.vue'
 import TopHeader from '@/components/organisms/TopHeader.vue'
 import HardTopBar from '@/components/organisms/HardTopBar.vue'
+import paymentCompletePage from '@/views/paymentCompletePage.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -138,7 +139,13 @@ const router = createRouter({
         step: StepperPayment
       }
     },
-
+    {
+      path: '/paymentSuccess',
+      name: 'paymentSuccess',
+      components: {
+        content: paymentCompletePage,
+      }
+    },
 
   ]
 })

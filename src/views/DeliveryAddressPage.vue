@@ -18,7 +18,7 @@ const addressStoreInstance = useAddressStore()
 onMounted(async () => {
   order_status.value = cartStore.order_status
   order_date.value = cartStore.order_date
-  addressStoreInstance.fetchAddresses('')
+  await addressStoreInstance.fetchAddresses('')
   await userStore.userConnected() // Fetch all addresses initially
 })
 
@@ -26,7 +26,7 @@ onMounted(async () => {
 
 <template>
   <div>
-    <StepperDeliveryAddresses></StepperDeliveryAddresses>
+    <StepperDeliveryAddresses/>
   </div>
   <div class="mx-48 my-8">
     <div class="mt-8 mb-8">

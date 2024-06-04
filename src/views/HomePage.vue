@@ -15,6 +15,10 @@
   const route = useRoute()
   crafterStore.getCrafterById(route.params.crafterId)
   import CardCrafter from '@/components/organisms/CardCrafter.vue'
+  import CardProduct from '@/components/organisms/CardProduct.vue'
+  import IconSolidaire from '@/components/atoms/IconSolidaire.vue'
+  import IconArtisan from '@/components/atoms/IconArtisan.vue'
+  import IconFrance from '@/components/atoms/IconFrance.vue'
   async function getData (){
   loading.value = true;
   try{

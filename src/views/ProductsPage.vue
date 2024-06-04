@@ -2,7 +2,10 @@
 
 import { useProductStore } from '@/stores/product.js';
 import { onMounted } from 'vue'
-import ImageBackground from '@/components/atoms/ImageBackground.vue' // Correct the path
+import ImageBackground from '@/components/atoms/ImageBackground.vue'
+import Loading from '@/components/atoms/Loading.vue'
+import CardProduct from '@/components/organisms/CardProduct.vue'
+import BreadCrumbs from '@/components/atoms/BreadCrumbs.vue' // Correct the path
 
 onMounted(async () => {
   await productStoreInstance.getProducts(); // Ensure that the products are loaded when the component is mounted
