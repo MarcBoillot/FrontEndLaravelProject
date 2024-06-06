@@ -34,9 +34,6 @@ export const useCrafterStore = defineStore('crafter', () => {
       const response = await axios.get(`http://localhost:8000/api/crafter/${crafterId}`)
       crafterById.value = response.data
       idCrafterSelected.value = crafterById.value.id
-      console.log("id crafter ::", idCrafterSelected.value )
-      console.log("crafterById data :: ", crafterById.value)
-      console.log("crafterById :: ",response)
     }catch (error){
       throw new Error(error)
     }

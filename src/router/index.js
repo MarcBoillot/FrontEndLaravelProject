@@ -19,6 +19,7 @@ import DeliveryAddressPage from '@/views/DeliveryAddressPage.vue'
 import TopHeader from '@/components/organisms/TopHeader.vue'
 import HardTopBar from '@/components/organisms/HardTopBar.vue'
 import paymentCompletePage from '@/views/paymentCompletePage.vue'
+import HistoryOrderPage from '@/views/HistoryOrderPage.vue'
 // import TopHeader from '@/components/organisms/TopHeader.vue'
 
 const router = createRouter({
@@ -146,6 +147,14 @@ const router = createRouter({
         content: paymentCompletePage,
       }
     },
+    {
+      path: '/historyOrder',
+      name: 'historyOrder',
+      components:{
+        content: HistoryOrderPage,
+    },
+
+}
 
   ]
 })

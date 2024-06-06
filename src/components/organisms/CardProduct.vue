@@ -25,7 +25,7 @@ function handleAddToCart(product) {
       <h4 class="card-title text-sm">{{ product.name}}</h4>
 <!--      <h4 class="card-title text-sm">{{ product.name.length > 50 ? product.name.substr(0, 20) + '...' : product.name }}</h4>-->
       <div class="text-xs">Description</div>
-      <div class="w-48 text-xs"> {{ product.description.length > 100
+      <div class="w-auto text-xs"> {{ product.description.length > 100
         ? product.description.substr(0, 100) + '...'
         : product.description }}</div>
       <div class="block card-actions justify-end">

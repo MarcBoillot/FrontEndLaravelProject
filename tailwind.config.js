@@ -13,7 +13,8 @@ export default {
     },
     fontFamily:{
       'serif':['ui-serif','Imbue'],
-      'sans':['ui-sans-serif','Rubik']
+      'sans':['ui-sans-serif','Rubik'],
+      'sans2': ['Helvetica', 'Arial', 'sans-serif'],
     },
     letterSpacing: {
       tightest: '-.075em',

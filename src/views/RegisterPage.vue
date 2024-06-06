@@ -14,37 +14,40 @@ const userStore = useUserStore()
 </script>
 
 <template>
-  <div class="ml-48 mr-48">
-    <div class="mt-8 mb-8">
-      <InputFirstName />
+  <div class="flex flex-col items-center min-h-screen justify-center">
+    <p class="">Je m'enregistre</p>
+    <div class="w-full max-w-lg">
+      <div class="flex mt-8 mb-8">
+        <InputFirstName class=" w-full"/>
+      </div>
+      <div>
+        <InputLastName class="w-full"/>
+      </div>
+      <div class="mt-8 mb-8">
+        <InputMail class="w-full"/>
+      </div>
+      <div class="mt-8 mb-8">
+        <InputBirthdate class="w-full"/>
+      </div>
+      <div class="mt-8 mb-8">
+        <InputPhoneNumber class="w-full"/>
+      </div>
+      <div class="mt-8 mb-8">
+        <InputRole class="w-full"/>
+      </div>
+      <div class="flex mt-8 mb-8">
+        <InputPassword class=" w-full"/>
+      </div>
+      <div>
+        <InputPasswordConfirmation class="w-full"/>
+      </div>
     </div>
-    <div class="mt-8 mb-8">
-      <InputLastName />
+    <div class="mt-8">
+      <ButtonRegister @click="userStore.register"/>
     </div>
-    <div class="mt-8 mb-8">
-      <InputMail />
-    </div>
-    <div class="mt-8 mb-8">
-      <InputBirthdate />
-    </div>
-    <div class="mt-8 mb-8">
-      <InputPhoneNumber />
-    </div>
-    <div class="mt-8 mb-8">
-      <InputRole />
-    </div>
-    <div class="mt-8 mb-8">
-      <InputPassword />
-    </div>
-    <div class="mt-8 mb-8">
-      <InputPasswordConfirmation />
-    </div>
-  </div>
-  <div class="grid place-items-center">
-    <ButtonRegister @click="userStore.register"/>
   </div>
 </template>
 
 <style scoped>
-
+/* Ajoutez ici des styles supplémentaires si nécessaire */
 </style>

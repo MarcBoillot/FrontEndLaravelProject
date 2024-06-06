@@ -8,7 +8,7 @@ import NavBar from '@/components/atoms/NavBar.vue'
 </script>
 
 <template>
-  <div class="flex justify-between flex-wrap mb-24 mt-24 mx-12">
+  <div class="flex justify-between flex-wrap mb-24 mt-24 mx-2">
     <LogoText />
     <NavBar />
     <IconMenu />

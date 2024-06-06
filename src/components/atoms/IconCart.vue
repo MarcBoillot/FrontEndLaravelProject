@@ -4,7 +4,7 @@
 
 <template>
   <RouterLink to="/cart">
-    <PhShopping-cart/>
+    <PhShopping-cart class="w-8 h-8" />
   </RouterLink>
 </template>
 
